@@ -20,8 +20,8 @@ void loop() {
   Serial.println("Sending...");
 
   String uri = "/addRange?name=";
-  uri += "Arduino";
-  uri += "&range=";
+  uri += "ArduinoOne";
+  uri += "&value=";
   uri += String(rangePW);
   Serial.println(uri);
 
