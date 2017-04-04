@@ -17,5 +17,4 @@ http://www.arduino.org/learning/getting-started/getting-started-with-arduino-uno
 
 ## REST Server
 Once the Arduino is setup your can change the device name at: `http://<arduinoIP>/arduino/mode/write/:name`  
-
 And in order to check the current name: `http://<arduinoIP>/arduino/mode/read`
