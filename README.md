@@ -1,14 +1,9 @@
 # Arduino
 
 ## Dependencies
-Maxbotix (included)  
-An Arduino library to read Maxbotix ultrasonic sensors
-
-Arduino Uno WiFi Dev Ed Library (included)  
-Library for Arduino Uno WiFi Developer Edition
-
-Arduino IDE for development 
-http://www.arduino.org/downloads
+- Maxbotix (included): An Arduino library to read Maxbotix ultrasonic sensors
+- Arduino Uno WiFi Dev Ed Library (included): Library for Arduino Uno WiFi Developer Edition
+- Arduino IDE for development: http://www.arduino.org/downloads
 
 ## Installation
 Setup the WiFi module:
