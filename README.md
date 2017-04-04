@@ -11,10 +11,8 @@ http://www.arduino.org/learning/getting-started/getting-started-with-arduino-uno
 
 ## Development
 1. Install the card Arduino AVR Boards (see the `Screenshots` folder)
-
 2. Open sketch.ino into Arduino IDE and change this line to your server address:  
 `#define SERVER_ADDR   "firebaseadmin.herokuapp.com`"
-
 3. Upload the sketch to your device.
 
 ## REST Server
