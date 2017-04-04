@@ -8,6 +8,7 @@
 ## Installation
 Setup the WiFi module:
 http://www.arduino.org/learning/getting-started/getting-started-with-arduino-uno-wifi  
+Set the device name `http://<arduinoIP>/arduino/mode/write/:name` 
 
 ## Development
 1. Install the card Arduino AVR Boards (see the `Screenshots` folder)
@@ -16,5 +17,7 @@ http://www.arduino.org/learning/getting-started/getting-started-with-arduino-uno
 3. Upload the sketch to your device.
 
 ## REST Server
-Once the Arduino is setup your can change the device name at: `http://<arduinoIP>/arduino/mode/write/:name`  
-And in order to check the current name: `http://<arduinoIP>/arduino/mode/read`
+Change the device name: `http://<arduinoIP>/arduino/mode/write/:name`  
+Stop measuring values : `http://<arduinoIP>/arduino/mode/write`  
+Check the current device name: `http://<arduinoIP>/arduino/mode/read`  
+To change the update interval (millisecond): `http://<arduinoIP>/arduino/mode/interval/:number`  

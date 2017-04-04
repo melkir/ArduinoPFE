@@ -13,24 +13,25 @@ unsigned long previousMillisServer = 0;
 const long intervalServer = 50;
 
 unsigned long previousMillisClient = 0;
-const long intervalClient = 30000;
+long intervalClient = 30000;
 
 void setup() {
-  deviceName = "ArduinoOne";
+  deviceName = "";
 
   Ciao.begin();
-  Ciao.println("REST Client is up");
+  Ciao.print("REST Client is up !");
   
   Wifi.begin();
-  Wifi.println("REST Server is up");
+  Wifi.println("REST Server is up !");
 }
  
 void loop() {
-  clientLoop();
   serverLoop();
+  clientLoop();
 }
 
 void clientLoop() {
+  if (deviceName == "") return;
   unsigned long currentMillis = millis();
   if (currentMillis - previousMillisClient >= intervalClient) {
     previousMillisClient = currentMillis;    
@@ -87,6 +88,11 @@ void modeCommand(WifiData client) {
     client.println("HTTP/1.1 200 OK\n");
     client.print(F("Device name set to: "));
     client.print(deviceName);
+  } else if (command == "interval") {
+    intervalClient = client.parseInt();
+    client.println("HTTP/1.1 200 OK\n");
+    client.print(F("Update interval set to: "));
+    client.print(intervalClient);
   }
   client.print(EOL);    //char terminator
 }
