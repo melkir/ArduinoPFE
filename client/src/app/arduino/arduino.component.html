@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header">
+    Arduino configuration
+  </div>
+  <div class="card-block">
+    <p class="alert-success" *ngIf="success">{{success}}</p>
+    <label>Arduino name: <input #newArduinoName/></label>
+    <button class="btn btn-primary" (click)="setName(newArduinoName.value);">Update</button>
+    <br>
+    <label>Update interval: <input type="number" #newInterval/></label>
+    <button class="btn btn-primary" (click)="setInterval(newInterval.value);">Update</button>
+  </div>
+</div>
